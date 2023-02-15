@@ -3,6 +3,7 @@
 namespace Istvan0304\Workflow;
 
 use Illuminate\Support\Facades\Schema;
+use Istvan0304\Workflow\Exceptions\WorkflowException;
 
 trait WorkflowTrait
 {
