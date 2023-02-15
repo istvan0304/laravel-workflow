@@ -1,7 +1,7 @@
 {
     "name": "istvan0304/laravel-workflow",
     "type": "library",
-    "description": "Laravel workflow service",
+    "description": "Laravel workflow engine.",
     "keywords": ["laravel", "workflow"],
     "homepage": "",
     "license": "MIT",
