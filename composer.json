@@ -1,0 +1,24 @@
+{
+    "name": "istvan0304/laravel-workflow",
+    "type": "library",
+    "description": "Laravel workflow service",
+    "keywords": ["laravel", "workflow"],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "istvan0304",
+            "email": "sz.istvan0304@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Istvan0304\\Workflow\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
