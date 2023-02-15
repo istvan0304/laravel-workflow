@@ -166,14 +166,14 @@ trait WorkflowTrait
     /**
      * @return array
      */
-    public function getStatusDropDownList()
+    public function getStatusDropDownList($action = false)
     {
         $workflowDefinition = $this->workflowClass::getDefinition();
         $list = [];
 
         if (is_array($workflowDefinition) && isset($workflowDefinition['status'])) {
             foreach ($workflowDefinition['status'] as $status => $statusArray) {
-                $list[] = ['id' => $status, 'label' => self::getActionStatusLabel($this->workflowClass, $status)];
+                $list[] = ['id' => $status, 'label' => ($action ? self::getActionStatusLabel($this->workflowClass, $status) : $this->workflowClass::statusLabels()[$status])];
             }
         }
 
