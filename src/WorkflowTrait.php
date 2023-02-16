@@ -7,7 +7,7 @@ use Istvan0304\Workflow\Exceptions\WorkflowException;
 
 trait WorkflowTrait
 {
-    private $workflowStatusAttribute = 'status';
+    protected $workflowStatusAttribute = 'status';
 
     /**
      * @throws WorkflowException
@@ -143,7 +143,7 @@ trait WorkflowTrait
      */
     protected function getWorkflowAttribute()
     {
-        $attribute = $this->workflowStatusAttribute;
+        $attribute = $this->customWorkflowStatusAttribute ?? $this->workflowStatusAttribute;
 
         if (Schema::hasColumn($this->getTable(), $attribute)) {
             return $attribute;

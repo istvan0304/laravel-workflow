@@ -6,7 +6,7 @@ composer require istvan0304/laravel-workflow
 
 ### <u>Configuration</u>
 
-#### Attach Workflow behavior into your Model and set a workflow class attribute.
+#### Attach Workflow behavior into your Model.
 
 ````
 use Istvan0304\Workflow\WorkflowTrait;
@@ -19,11 +19,15 @@ class BlogPost extends Model
      * @var string
      */
     protected string $workflowClass = BlogPostWorkflow::class;
-    
-    private $workflowStatusAttribute = 'status';    // Default is status
 ````
 
-Add observer to the EventServiceProvider:
+#### Default workflow attribute is "status" but you can overwrite it in your Model like:
+
+````
+protected string $customWorkflowStatusAttribute = 'state';
+````
+
+#### Add observer to the EventServiceProvider:
 
 ````
 protected $observers = [
